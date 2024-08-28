@@ -1,4 +1,7 @@
 ---
+import Piedepagina from "../componentes/piedepagina.astro";
+import Header from "../componentes/Header.astro";
+import '../styles/global.css'; 
 
 ---
 
@@ -12,14 +15,16 @@
 		
 	</head>
 	<body>
-	
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-		<a href="/blog">Blog</a>
+	 
+		<Header  />
+     
 		
+		<li><a href="/posts/post-1/">Post 1</a></li>
+        <li><a href="/posts/post-2/">Post 2</a></li>
+        <li><a href="/posts/post-3/">Post 3</a></li>
          
 
-
-
+      <Piedepagina/>
+   
 	</body>
 </html>

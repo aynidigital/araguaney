@@ -1,4 +1,18 @@
 ---
+import '../styles/global.css'; 
+import Piedepagina from '../componentes/piedepagina.astro';
+import Header from '../componentes/Header.astro';
+
+  const pageTitle= "Acerca de Mi";
+  const identidad= {
+      nombreYapellidos: "Christian",
+      pais: "Venezuela",
+      ocupación: "Docente", 
+      pasatiempos: ["beisbol", "diseñoweb", "Real Madrid"] 
+        }
+
+    const conocimiento = ["Educación" , "Cine" , "Programación"];     
+
 
 ---
 
@@ -8,20 +22,35 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>CRIFPMA</title>
-		
+		<title>{pageTitle}</title>
+        <style>
+            h1 {
+              color: purple;
+              font-size: 4rem;
+            }
+          </style>
+
+       
 	</head>
 	<body>
-	
-		
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/blog">Blog</a>
-       
+
+    <Header />
 		
          
+        <h1>{pageTitle}</h1>
+
+        <h1>Bienvenidos, Gusto en Conocerte mi nombre es </h1>
+        <ul>
+
+            <li>{identidad.nombreYapellidos}</li>
+            <li> Vivo en {identidad.pais}</li>
+            <li>Mis pasatiempos favoritos son {identidad.pasatiempos[0]}, {identidad.pasatiempos[1]}</li>
+            <li>Fanatico del {identidad.pasatiempos[2]}</li>
 
 
+        </ul>
+		
 
+       <Piedepagina />
 	</body>
 </html>
